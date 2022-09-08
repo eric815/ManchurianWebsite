@@ -1,47 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap");
 
-:root{
-    --primary:blue;
-    --dark:#21252f;
-    --body:white;
+:root {
+  --primary: blue;
+  --dark: #21252f;
+  --body: white;
+}
+body {
+  font-family: sora, "san-serif";
+  line-height: 1.7;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-400 {
+  color: var(--body);
+  font-weight: 700;
+}
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
 
-}
-body{
-    font-family: sora,"san-serif";
-    line-height: 1.7;
-
-}
-h1,h2,h3,h4,h5,h6,
-.display-400{
-    color:var(--body);
-    font-weight: 700;
-}
-a{
-    color:var(--dark);
-    text-decoration: none;
+.navbar{
+  box-shadow: var(--box-shadow);
 }
 .navbar .nav-link {
-    font-size: 14px;
-    font-weight: 700;
+  font-size: 14px;
+  font-weight: 700;
 }
-.hero{
-    background-image:url(images/pexels-dan-cristian-pădureț-1193743.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    z-index: 2;
+.hero {
+  background-image: url(images/pexels-dan-cristian-pădureț-1193743.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+}
+.hero::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(46, 76, 95, 0.808);
+  z-index: -1;
+}
+section{
+  padding-top: 120px;
+  padding-bottom 120px;
 
 }
-.hero::after{
-    content:"";
-    width:100%;
-    height:100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(46, 76, 95, 0.808);
-    z-index: -1;
 
+.card-effect{
+  box-shadow: var(--box-shadow);
+  background:#fff;
+  padding: 25px;
+  transition: all 0.35s ease;
+}
 
+.card-effect:hover{
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.iconbox{
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:var(--primary);
+  color: #fff;
+  font-size: 32px;
+  border-radius: 100px;
+}
+
+.service{
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+}
+.service::after{
+  content: '';
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color:var(--primary);
+  z-index: -1;
+  opacity: 0;
+  transition:all 0.4s ease;
+}
+.service:hover .iconbox {
+  background-color:#fff;
+  color:var(--primary);
+}
+.service:hover h5,
+.service:hover p {
+  color:#fff;
+
+}
+.service:hover::after{
+  opacity:1;
+  top: 0;
+
+}
+
+.about{
+  display: flex;
 }
