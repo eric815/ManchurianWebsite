@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap");
 
+
 :root {
   --primary: blue;
   --dark: #21252f;
@@ -9,6 +10,7 @@ body {
   font-family: sora, "san-serif";
   line-height: 1.7;
 }
+
 h1,
 h2,
 h3,
@@ -44,7 +46,7 @@ img {
   z-index: 2;
 }
 .hero::after {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   position: absolute;
@@ -88,12 +90,15 @@ section {
   overflow: hidden;
 }
 .service::after {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   position: absolute;
-  top: -100%;
+  top: 0%;
   left: 0;
+  padding: 30px;
+  display: flex;
+  align-items: flex-end;
   background-color: var(--primary);
   z-index: -1;
   opacity: 0;
@@ -139,5 +144,5 @@ section {
 }
 
 .work:hover img {
-  transform:scale(1.1);
+  transform: scale(1.1);
 }
