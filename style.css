@@ -60,6 +60,10 @@ section {
   padding-bottom: 120px;
 }
 
+.Yellow-text{
+  color: yellow;
+}
+
 .card-effect {
   box-shadow: var(--box-shadow);
   background: #fff;
